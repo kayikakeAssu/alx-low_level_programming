@@ -1,3 +1,10 @@
-#!/bin/bash
 #include <stdio.h>
-int main(void) { return puts("Programming is like building a multilingual puzzle"), 0; }
+/**
+*main - printing with puts function
+*Return: 0 (Success)
+*/
+int main(void)
+{
+puts("Programming is like building a multilingual puzzle\n");
+return (0);
+}
