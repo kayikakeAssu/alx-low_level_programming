@@ -12,22 +12,23 @@ if (n <= 98)
 {
 for (int i = n; i <= 98; i++)
 {
-_putchar("%d", i);
+printf("%d", i);
 if (i != 98)
 {
-_putchar(", ");
+printf(", ");
+}
 }
 }
 else
 {
 for (int i = n; i >= 98; i--)
 {
-_putchar("%d", i);
+printf("%d", i);
 if (i != 98)
 {
-_putchar(", ");
+printf(", ");
 }
 }
 }
-_putcha("\n");
+printf("\n");
 }
