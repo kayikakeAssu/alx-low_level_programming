@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-int i, j;
+int i;
 int fib[50];
 fib[0] = 1;
 fib[1] = 2;
@@ -14,9 +14,9 @@ for (i = 2; i < 50; i++)
 {
 fib[i] = fib[i - 1] + fib[i - 2];
 }
-for (j = 0; j < 49; j++)
+for (i = 0; i < 49; i++)
 {
-printf("%d, ", fib[j]);
+printf("%d, ", fib[i]);
 }
 printf("%d\n", fib[49]);
 return (0);
