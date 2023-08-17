@@ -1,27 +1,26 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
 /**
 * more_numbers - Print 10 times the numbers since 0 up to 14
 *
 * Return: void
 */
-
 void more_numbers(void)
 {
-int i, j, num;
+int x, y;
 
-for (i = 0; i < 10; i++)
+for (x = 0; x < 10; x++)
 {
-for (j = 0; j <= 14; j++)
+for (y = 0; y <= 14; y++)
 {
-num = j;
-if (j >= 10)
+if (y > 9)
 {
-_putchar('1');
-num = j % 10;
+_putchar((y / 10) + '0');
 }
-_putchar(num + '0');
+
+_putchar((y % 10) + '0');
 }
+
 _putchar('\n');
 }
 }
