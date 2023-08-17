@@ -1,24 +1,29 @@
 #include "main.h"
+
 /**
-* print_square - Draws a square lines according parameter
-* @size: The number of times to print sqr lines
+* print_square - Prints n squares according n number of times
+* @size: The number of squares
 *
-* Return: empty
+* Return: void
 */
 void print_square(int size)
 {
+int x, y;
+
 if (size <= 0)
 {
 _putchar('\n');
-return;
+}
+else
+{
+for (x = 0; x < size; x++)
+{
+for (y = 0; y < size; y++)
+{
+_putchar(35);
 }
 
-for (int i = 0; i < size; i++)
-{
-for (int j = 0; j < size; j++)
-{
-_putchar('#');
-}
 _putchar('\n');
+}
 }
 }
