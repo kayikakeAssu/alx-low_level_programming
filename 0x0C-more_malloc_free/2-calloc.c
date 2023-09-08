@@ -1,51 +1,32 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
-* _realloc - ...
-* @ptr: ...
-* @old_size: ...
-* @new_size: ...
-*
-* Return: ...
-*/
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+  * _calloc - ...
+  * @nmemb: number of members
+  * @size: size
+  *
+  * Return: ...
+  */
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *nptr;
-unsigned int i;
+int i = 0, l = 0;
+char *p;
 
-if (new_size == old_size)
-return (ptr);
-
-if (ptr == NULL)
-{
-nptr = malloc(new_size);
-
-if (nptr == NULL)
+if (nmemb == 0 || size == 0)
 return (NULL);
 
-return (nptr);
-}
-else
-{
-if (new_size == 0)
-{
-free(ptr);
-return (NULL);
-}
-}
+l = nmemb * size;
+p = malloc(l);
 
-nptr = malloc(new_size);
-
-if (nptr == NULL)
+if (p == NULL)
 return (NULL);
 
-for (i = 0; i < old_size && i < new_size; i++)
+while (i < l)
 {
-nptr[i] = ((char *) ptr)[i];
+p[i] = 0;
+i++;
 }
 
-free(ptr);
-return (nptr);
+return (p);
 }
